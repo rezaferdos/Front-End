@@ -1,0 +1,216 @@
+/* ===========================
+   Reset and base styles
+   =========================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    background: #0e0e0e; /* Dark background */
+    color: white;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   Main container and sections
+   =========================== */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Responsive */
+}
+
+/* Form section */
+.form-section {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inputs styling */
+.form-section input[type="file"],
+.form-section input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Apply watermark button */
+#applyWatermark {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 320px;
+    transition: background-color 0.3s ease;
+}
+
+#applyWatermark:hover {
+    background-color: #0056b3;
+}
+
+/* Watermarked image display */
+#watermarkedImage {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: none; /* Hidden initially */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Download link styling */
+#downloadLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#downloadLink:hover {
+    background-color: #218838;
+}
+
+/* Guide image section */
+.image-guide {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-guide img {
+    pointer-events: none;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ===========================
+   Background animated shapes
+   =========================== */
+.background-animation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    pointer-events: none; /* Prevent interaction */
+    overflow: hidden;
+    z-index: -1; /* Behind content */
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Individual shapes with size, color, position, and animation duration */
+.shape1  { width: 60px;  height: 60px;  background: #ff6b6b;  top: 2%;   left: 5%;   animation: move 4s  infinite alternate; }
+.shape2  { width: 80px;  height: 80px;  background: #feca57;  top: 10%;  left: 85%;  animation: move 6s infinite alternate; }
+.shape3  { width: 50px;  height: 50px;  background: #48dbfb;  top: 85%;  left: 10%;  animation: move 7s  infinite alternate; }
+.shape4  { width: 90px;  height: 90px;  background: #1dd1a1;  top: 90%;  left: 80%;  animation: move 7s infinite alternate; }
+.shape5  { width: 40px;  height: 40px;  background: #ff9f43;  top: 5%;   left: 90%;  animation: move 5s infinite alternate; }
+.shape6  { width: 70px;  height: 70px;  background: #54a0ff;  top: 15%;  left: 2%;   animation: move 4s  infinite alternate; }
+.shape7  { width: 55px;  height: 55px;  background: #00d2d3;  top: 80%;  left: 5%;   animation: move 4s infinite alternate; }
+.shape8  { width: 65px;  height: 65px;  background: #f368e0;  top: 3%;   left: 60%;  animation: move 7s infinite alternate; }
+.shape9  { width: 45px;  height: 45px;  background: #ff6b6b;  top: 90%;  left: 15%;  animation: move 3s infinite alternate; }
+.shape10 { width: 85px;  height: 85px;  background: #feca57;  top: 88%;  left: 30%;  animation: move 6s infinite alternate; }
+.shape11 { width: 50px;  height: 50px;  background: #48dbfb;  top: 5%;   left: 40%;  animation: move 8s  infinite alternate; }
+.shape12 { width: 75px;  height: 75px;  background: #1dd1a1;  top: 10%;  left: 78%;  animation: move 2s infinite alternate; }
+.shape13 { width: 40px;  height: 40px;  background: #ff9f43;  top: 85%;  left: 75%;  animation: move 3s infinite alternate; }
+.shape14 { width: 70px;  height: 70px;  background: #54a0ff;  top: 2%;   left: 95%;  animation: move 9s  infinite alternate; }
+.shape15 { width: 55px;  height: 55px;  background: #00d2d3;  top: 75%;  left: 2%;   animation: move 6s infinite alternate; }
+.shape16 { width: 65px;  height: 65px;  background: #f368e0;  top: 92%;  left: 20%;  animation: move 4s infinite alternate; }
+.shape17 { width: 45px;  height: 45px;  background: #ff6b6b;  top: 80%;  left: 35%;  animation: move 3s infinite alternate; }
+.shape18 { width: 85px;  height: 85px;  background: #feca57;  top: 7%;   left: 50%;  animation: move 7s infinite alternate; }
+.shape19 { width: 50px;  height: 50px;  background: #48dbfb;  top: 92%;  left: 65%;  animation: move 8s  infinite alternate; }
+.shape20 { width: 75px;  height: 75px;  background: #1dd1a1;  top: 12%;  left: 80%;  animation: move 6s infinite alternate; }
+
+/* Smooth moving animation */
+@keyframes move {
+    0%   { transform: translate(0, 0); }
+    50%  { transform: translate(20px, 30px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .shape {
+        width: 30px !important;
+        height: 30px !important;
+        opacity: 0.15 !important;
+    }
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column-reverse; /* show image first, then form */
+        align-items: center;
+    }
+
+    .form-section, .image-guide {
+        max-width: 100%;
+    }
+
+    #applyWatermark, #downloadLink {
+        max-width: 100%;
+    }
+}
+
+/* Watermark spacing radio buttons styling */
+#watermark-options {
+  margin-bottom: 15px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#watermark-options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#watermark-options input[type="radio"] {
+  margin-right: 8px;
+}

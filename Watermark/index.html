@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watermark your Picture</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page title -->
+  <h3>Watermark Image Generator</h3>
+
+  <!-- Main container holding form and guide image -->
+  <div class="container">
+
+    <!-- Form section -->
+    <section class="form-section">
+
+      <!-- Image file input -->
+      <input type="file" id="imageInput" accept="image/*" />
+
+      <!-- Watermark text input -->
+      <input type="text" id="watermarkText" placeholder="Enter watermark text" />
+
+      <!-- Watermark spacing options as radio buttons -->
+      <div id="watermark-options" aria-label="Watermark spacing options">
+        <label>
+          <input type="radio" name="watermarkChoice" value="150,150" />
+          Low
+        </label>
+        <label>
+          <input type="radio" name="watermarkChoice" value="200,180" checked />
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="watermarkChoice" value="300,300" />
+          High
+        </label>
+      </div>
+
+      <!-- Apply watermark button -->
+      <button id="applyWatermark">Apply Watermark</button>
+
+      <!-- Display watermarked image -->
+      <img id="watermarkedImage" src="" alt="Watermarked Image" />
+
+      <!-- Download link for watermarked image -->
+      <a id="downloadLink" href="" download="watermarked_image.png">Download</a>
+    </section>
+
+    <!-- Guide image section -->
+    <aside class="image-guide">
+      <img src="Tip.png" alt="Guide Image" />
+    </aside>
+  </div>
+
+  <!-- Background animated shapes -->
+  <div class="background-animation">
+    <!-- 20 shapes with individual classes -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
+    <div class="shape shape5"></div>
+    <div class="shape shape6"></div>
+    <div class="shape shape7"></div>
+    <div class="shape shape8"></div>
+    <div class="shape shape9"></div>
+    <div class="shape shape10"></div>
+    <div class="shape shape11"></div>
+    <div class="shape shape12"></div>
+    <div class="shape shape13"></div>
+    <div class="shape shape14"></div>
+    <div class="shape shape15"></div>
+    <div class="shape shape16"></div>
+    <div class="shape shape17"></div>
+    <div class="shape shape18"></div>
+    <div class="shape shape19"></div>
+    <div class="shape shape20"></div>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="app.js"></script>
+</body>
+</html>
